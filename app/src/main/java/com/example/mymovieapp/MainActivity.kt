@@ -54,7 +54,7 @@ fun MyApp(content: @Composable () -> Unit){
 fun DefaultPreview() {
 
     MyApp {
-        MovieNavigation()git
+        MovieNavigation()
     }
 
 }

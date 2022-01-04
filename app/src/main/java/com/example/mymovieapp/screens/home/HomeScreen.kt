@@ -16,13 +16,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.mymovieapp.navigation.MovieScreens
 
 @Composable
 fun HomeScreen(navController: NavController){
 
     Scaffold(topBar = {
         TopAppBar(
-            backgroundColor = Color.Magenta,
+            backgroundColor = Color.LightGray,
             elevation = 5.dp
         )
         {
@@ -59,6 +60,8 @@ fun MyMainContent(
             items(items = movieList){
 
                 MovieRow(movie = it){ movie ->
+
+                    navController.navigate(route = MovieScreens.DetailsScreen.name+"/$movie")
 
                 }
 
